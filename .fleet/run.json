@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "python-tests",
+            "name": "Python-tests configuration",
+            "testFramework": "pytest",
+            "targets": ["2023/1201_P2/test4"],
+        },
+        
+    ]
+}
