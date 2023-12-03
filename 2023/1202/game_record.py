@@ -17,7 +17,7 @@ class Game:
                 total += gs.green
         return total
 
-    def get_max(self) -> [(int, int, int)]:
+    def get_max(self) -> (int, int, int, int):
         max_r = 0
         max_b = 0
         max_g = 0
@@ -28,16 +28,17 @@ class Game:
                 max_b = gs.blue
             if gs.green > max_g:
                 max_g = gs.green
-        return [(max_r, max_b, max_g)]
+        power = max_r*max_b*max_g
+        return max_r, max_b, max_g, power
     
     def is_possible(self, maxes) -> bool:
         result = True
         g_maxes = self.get_max()
-        if g_maxes[0][0] > maxes[0]:
+        if g_maxes[0] > maxes[0]:
             result = False
-        if g_maxes[0][1] > maxes[1]:
+        if g_maxes[1] > maxes[1]:
             result = False
-        if g_maxes[0][2] > maxes[2]:
+        if g_maxes[2] > maxes[2]:
             result = False   
         return result
 

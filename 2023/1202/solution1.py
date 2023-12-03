@@ -46,4 +46,5 @@ def possible_games(games, maxes) -> (list, int):
             possible.append(game.gid)
             gid_total += game.gid
     print(f'possible games {possible}')
+    print(f'possible games gid total {gid_total}')
     return possible, gid_total
