@@ -2,7 +2,7 @@ from solution1 import read_almanac
 
 
 def test_input():
-    read_almanac('input.txt')
+    read_almanac('input1.txt')
 
 
 def test_example():
